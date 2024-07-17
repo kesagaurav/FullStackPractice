@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
-import { Employee } from './employee';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { LoginComponent } from './login/login.component';
 import { NotfoundComponent } from './notfound/notfound.component';
@@ -15,8 +14,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'viewEmployee',component:ViewEmployeeComponent},
   {path:'addEmployee',component:AddEmployeeComponent},
-  {path:'updateEmployee',component:UpdateEmployeeComponent},
-  {path:'employee/:id',component:Employee},
+  {path:'updateEmployee/:id',component:UpdateEmployeeComponent},
   {path:'',component:NotfoundComponent,pathMatch:'full'}
 ];
 

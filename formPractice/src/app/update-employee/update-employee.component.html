@@ -8,12 +8,22 @@
     <input id="age" class="form-control" type="number" [(ngModel)]="employee.age">
   </div>
   <div class="form-group">
+    <label for="gender">gender</label>
+    <br/>
+    <select [(ngModel)]="employee.gender">
+      <option label="male">male</option>
+      <option label="female">female</option>
+    </select>
+  </div>
+  <div class="form-group">
     <label for="location">location</label>
     <input id="location" class="form-control" type="text" [(ngModel)]="employee.location">
   </div>
  <button class="btn btn-success" (click)="submitEmployee(employee)">Submit</button>
- <div>
-  <span *ngIf="msg!=null">{{msg}}</span>
+ <br/>
+ <br/>
+ <div class="container">
+  <span class="alert alert-danger" *ngIf="msg!=null">{{msg}}</span>
  </div>
 </div>
 

@@ -19,14 +19,14 @@ export class ServiceService {
     return this.client.get<Employee[]>(this.url + 's');
   }
 
-  updateEmployee(e:Employee):Observable<any>{
-    return this.client.put(this.url,e);
+  updateEmployee(e:Employee,id:number):Observable<any>{
+    return this.client.put(this.url + `/${id}`,e);
   }
 
-  getById(id: number): Observable<Employee> {
-    return this.client.get<Employee>(this.url + `/${id}`);
+  getById(id: number): Observable<any> {
+    return this.client.get(this.url + `/${id}`);
   }
-  deleteById(id: number): Observable<number> {
-    return this.client.delete<number>(this.url + `/${id}`);
+  deleteById(id: number): Observable<any> {
+    return this.client.delete<any>(this.url + `/${id}`);
   }
 }

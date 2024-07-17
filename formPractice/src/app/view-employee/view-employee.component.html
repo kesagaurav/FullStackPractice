@@ -4,6 +4,7 @@
       <th>id</th>
       <th>name</th>
       <th>age</th>
+      <th>gender</th>
       <th>location</th>
       <th>update</th>
       <th>delete</th>
@@ -13,8 +14,9 @@
         <td>{{employee.eid}}</td>
         <td>{{employee.name}}</td>
         <td>{{employee.age}}</td>
+        <td>{{employee.gender}}</td>
         <td>{{employee.location}}</td>
-        <td><button type="button" class="btn btn-success" routerLink="updateEmployee/{{employee.eid}}">update</button></td>
+        <td><button type="button" class="btn btn-success" (click)="updateEmployee(employee.eid)">update</button></td>
 
         <td><button type="button" class="btn btn-danger" (click)="deleteEmployee(employee.eid)">delete</button></td>
 

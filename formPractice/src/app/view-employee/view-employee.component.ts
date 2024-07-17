@@ -46,10 +46,10 @@ export class ViewEmployeeComponent implements OnInit {
   }
 
 
-//   updateEmployee(id:number){
-//     console.log("update is " + `${id}`);
+  updateEmployee(id:number){
+    console.log("update is " + `${id}`);
 
-//     this.router.navigate(['/updateEmployee']);
-//  }
+    this.router.navigate(['/updateEmployee',id]);
+ }
 
 }
