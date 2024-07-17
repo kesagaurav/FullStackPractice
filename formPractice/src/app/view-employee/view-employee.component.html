@@ -1,0 +1,42 @@
+<div class="conatiner">
+  <table class="text-center table table-bordered table-primary">
+    <thead class="text-info">
+      <th>id</th>
+      <th>name</th>
+      <th>age</th>
+      <th>location</th>
+      <th>update</th>
+      <th>delete</th>
+    </thead>
+    <tbody class="text-success">
+      <tr *ngFor="let employee of employees">
+        <td>{{employee.eid}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.age}}</td>
+        <td>{{employee.location}}</td>
+        <td><button type="button" class="btn btn-success" routerLink="updateEmployee/{{employee.eid}}">update</button></td>
+
+        <td><button type="button" class="btn btn-danger" (click)="deleteEmployee(employee.eid)">delete</button></td>
+
+
+
+
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <span class="alert alert-success" *ngIf="msg!=null">
+      {{msg}}
+    </span>
+  </div>
+  <div>
+    <span class="alert alert-danger" *ngIf="errorMsg!=null">
+      {{errorMsg}}
+    </span>
+
+    <div>
+      <span class="alert alert-danger" *ngIf="updateFail!=null">
+        {{updateFail}}
+      </span>
+    </div>
+  </div>

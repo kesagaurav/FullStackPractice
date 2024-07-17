@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="form-group">
+    <label for="name">name</label>
+    <input id="name" class="form-control" type="text" [(ngModel)]="employee.name">
+  </div>
+  <div class="form-group">
+    <label for="age">age</label>
+    <input id="age" class="form-control" type="number" [(ngModel)]="employee.age">
+  </div>
+  <div class="form-group">
+    <label for="location">location</label>
+    <input id="location" class="form-control" type="text" [(ngModel)]="employee.location">
+  </div>
+ <button class="btn btn-success" (click)="submitEmployee(employee)">Submit</button>
+ <div>
+  <span *ngIf="msg!=null">{{msg}}</span>
+ </div>
+</div>
+
+

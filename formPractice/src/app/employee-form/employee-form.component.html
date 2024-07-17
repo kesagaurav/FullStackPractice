@@ -1,0 +1,52 @@
+<div class="container">
+  <form [formGroup]="registerForm" (ngSubmit)="submit()">
+    <div class="form-group">
+      <label for="id">id</label>
+      <input id="id" class="form-control" type="number" formControlName="id">
+      <span class="alert alert-danger" *ngIf="registerForm.controls['id'].errors&&registerForm.controls['id'].dirty">field id is invalid</span>
+    </div>
+    <div class="form-group">
+      <label for="firstName">FirstName</label>
+      <input id="firstName" class="form-control" type="text" formControlName="firstName">
+      <span class="alert alert-danger" *ngIf="registerForm.controls['firstName'].errors&&registerForm.controls['firstName'].dirty">field firtsnmae is invalid</span>
+    </div>
+    <div class="form-group">
+      <label for="lastName">lastName</label>
+      <input id="lastName" class="form-control" type="text" formControlName="lastName">
+      <span class="alert alert-danger" *ngIf="registerForm.controls['lastName'].errors&&registerForm.controls['lastName'].dirty">field firtsnmae is invalid</span>
+
+    </div>
+    <div class="form-group">
+      <label for="email">email</label>
+      <input id="email" class="form-control" type="email" formControlName="email">
+      <span class="alert alert-danger" *ngIf="registerForm.controls['email'].errors&&registerForm.controls['email'].dirty">field firtsnmae is invalid</span>
+
+    </div>
+    <div class="form-group">
+      <label for="phoneno">phoneno</label>
+      <input id="phoneno" class="form-control" type="number" formControlName="phoneno">
+      <span class="alert alert-danger" *ngIf="registerForm.controls['phoneno'].errors&&registerForm.controls['phoneno'].dirty">field firtsnmae is invalid</span>
+      <span class="alert alert-danger" *ngIf="registerForm.controls['phoneno'].errors?.['phoneIsInvalid']">{{registerForm.controls['phoneno'].errors?.['phoneIsInvalid'].gaurav}}</span>
+
+    </div>
+    <div class="form-group">
+      <label for="password">password</label>
+      <input id="password" class="form-control" type="password" formControlName="password">
+      <span class="alert alert-danger" *ngIf="registerForm.controls['password'].errors&&registerForm.controls['password'].dirty">field password is invalid</span>
+      <span class="alert alert-danger" *ngIf="registerForm.controls['password'].errors?.['passwordisInvalid']">{{registerForm.controls['password'].errors?.['passwordisInvalid'].message}}</span>
+    </div>
+    <button class="btn btn-primary"  [disabled]="registerForm.invalid&&registerForm.pristine">submit</button>
+  </form>
+</div>
+
+
+<div [hidden]="!submitted">
+<h3>employee details</h3>
+<p>{{registerForm.get('firstName')?.value}}</p>
+<p>{{registerForm.get('lastName')?.value}}</p>
+<p>{{registerForm.get('email')?.value}}</p>
+<p>{{registerForm.get('phoeno')?.value}}</p>
+<p>{{registerForm.get('password')?.value}}</p>
+<p>{{registerForm.get('id')?.value}}</p>
+
+</div>
