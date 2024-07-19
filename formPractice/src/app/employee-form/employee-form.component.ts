@@ -72,7 +72,10 @@ export class EmployeeFormComponent implements OnInit {
   }
 
   saveEmployee(e:Employee){
-
+    return this.service.createEmployee(e).subscribe(res=>{
+      this.employee=new Employee();
+      this.route.navigate([''])
+    })
   }
 
 

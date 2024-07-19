@@ -12,7 +12,9 @@
         <a class="nav-link text-primary" routerLink="/">not-found</a>
       </li>
 
-
+      <li class="nav-item">
+        <a class="nav-link text-dark" routerLink="/practice">practice</a>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link text-primary" routerLink="/addEmployee">add employee</a>
@@ -29,6 +31,22 @@
     </ul>
   </div>
 </nav>
+
+
+<div class="container">
+  <button type="button" class="btn btn-primary" (click)="isLogin()">Login</button>
+  <button type="button" class="btn btn-primary" (click)="isLogout()">Logout</button>
+
+</div>
+
+
+
+  <div class="container">
+    <p [attr.colspan]="colspan">first</p>
+    <p>second</p>
+    <button class="btn btn-primary" [style.color]="'blue'">ok</button>
+  </div>
+
 
 <div>
   <router-outlet></router-outlet>

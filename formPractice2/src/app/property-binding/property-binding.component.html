@@ -1,0 +1,32 @@
+<div class="container">
+  <h1 class="display-4">welcome to the property binding demo</h1>
+
+</div>
+
+<div class="container">
+  <form action="">
+    <input type="text" [id]="id" value="gaurav">
+    <input type="text" id="{{id}}" value="gaurav">
+  </form>
+
+  enter book name to be search: <input type="text" [(ngModel)]="id1">
+  you are searching for:{{id1}}
+
+  <br/>
+  <br/>
+
+  <input type="text"> <button class="btn btn-primary" (click)="bornYear()" [(ngModel)]="age">show me the year</button>
+  you were born in:{{bornYear}}
+
+
+  <br>
+  <br>
+<div id="ok">
+  changeColoer:<input type="text" [style.color]="color" [(ngModel)]="color">
+  <p [style.color]="color">pair the town in {{color}}</p>
+</div>
+
+
+
+</div>
+

@@ -1,0 +1,38 @@
+<div class="container">
+  <h1 appCustom class="text-center">details of student information are listed here</h1>
+  <table class="table table-bordered table-primary">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>gender</th>
+        <th>age</th>
+        <th>schoolName</th>
+        <th>schoolSection</th>
+        <th>location</th>
+        <th>update</th>
+        <th>delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let student of students" [ngClass]="{'highlight': student.sid===1}" [ngStyle]="{'font-size': '20px'}"> <!--[ngClass]="{'highlight': student.sid===2}" [ngStyle]="{'font-size': '20px'}"-->
+        <td>{{student.sid}}</td>
+        <td>{{student.studentName}}</td>
+        <td>{{student.gender}}</td>
+        <td>{{student.age}}</td>
+        <td>{{student.schoolName}}</td>
+        <td>{{student.schoolSection}}</td>
+        <td>{{student.location}}</td>
+        <td> <button class="btn btn-warning" (click)="updateStudent(student.sid)">update</button> </td>
+        <td> <button class="btn btn-danger" (click)="deleteStudent(student.sid)">delete</button> </td>
+      </tr>
+
+    </tbody>
+  </table>
+  <div>
+    <span class="alert alert-success" *ngIf="succMsg!=null">{{succMsg}}</span>
+  </div>
+  <div>
+    <span class="alert alert-success" *ngIf="errMsg!=null">{{errMsg}}</span>
+  </div>
+</div>
