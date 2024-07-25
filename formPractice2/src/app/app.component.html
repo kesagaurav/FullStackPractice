@@ -1,24 +1,36 @@
-<div class="jumbotron">
+<!-- <div class="jumbotron">
   <h1 class="jumbotron  mb-10 m-10 p-10 bg-primary">Hello,{{title}}</h1>
 
-</div>
-
+</div> -->
+<h1 class="text-center text-primary">Hello,{{title}}</h1>
+<br />
 <nav class="navbar navbar-expand-lg bg-warning">
   <div class="container">
     <ul class="nav navbar-nav">
       <li class="nav-item text-primary"><a class="nav-link" routerLink="/addstudent">addStudent</a> </li>
     </ul>
     <ul class="nav-link">
-      <li class="nav-item text-success"><a class="nav-link"  routerLink="/updatestudent">updateStudent</a></li>
+      <li class="nav-item text-success"><a class="nav-link" routerLink="/updatestudent">updateStudent</a></li>
     </ul>
     <ul class="nav-link">
-      <li class="nav-item text-danger"><a class="nav-link"  routerLink="/viewstudent">viewStudent</a></li>
+      <li class="nav-item text-danger"><a class="nav-link" routerLink="/viewstudent">viewStudent</a></li>
     </ul>
     <ul class="nav-link">
-      <li class="nav-item text-black"><a class="nav-link"  routerLink="/property">PropertyBinding</a></li>
+      <li class="nav-item text-black"><a class="nav-link" routerLink="/property">PropertyBinding</a></li>
     </ul>
     <ul class="nav-link">
+      <li class="nav-item text-success"><a class="nav-link" routerLink="/directive">Directives</a></li>
+    </ul>
+    <!-- <ul class="nav-link">
       <li class="nav-item text-black"><a class="nav-link"  routerLink="/not-found">Not Found</a></li>
+    </ul> -->
+
+    <ul class="nav-link">
+      <li class="nav-item text-primary"><a class="nav-link" routerLink="/pipe">pipe</a></li>
+    </ul>
+
+    <ul class="nav-link">
+      <li class="nav-item text-success"><a class="nav-link" routerLink="/course-list">output Decorator</a></li>
     </ul>
   </div>
 
@@ -28,4 +40,67 @@
 <div class="container">
   <router-outlet></router-outlet>
 
+</div>
+
+
+<!-- <div class="container">
+  <a [appPractice]="myMessage">click here</a>
+</div> -->
+
+
+<!--
+<div class="container">
+  <app-input-decorator *ngFor="let student of studentArray" [student]="student">
+  </app-input-decorator>
+</div> -->
+
+<div class="container">
+  <table class="table table-dark table-bordered">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>description</th>
+      </tr>
+    </thead>
+    <tbody>
+
+
+        <app-input-decorator *ngFor="let element1 of elementsArray" [kesaElement]="element1">
+          <td>
+            {{element1.id}}
+          </td>
+          <td>
+            {{element1.name}}
+          </td>
+          <td>
+            {{element1.description}}
+          </td>
+        </app-input-decorator>
+
+
+    </tbody>
+  </table>
+
+</div>
+<app-input-decorator *ngFor="let element of elementsArray" [kesaElement]="element"></app-input-decorator>
+<div class="container">
+  Select a course to view
+  <select #course (change)="name = course.value">
+    <option value="angular">angular</option>
+    <option value="js">js</option>
+    <option value="java">java</option>
+    <option value="springboot">springboot</option>
+  </select><br /><br />
+  <app-input-decorator [aName]="name"></app-input-decorator>
+</div>
+
+
+<div class="container">
+  <h1>courses list are</h1>
+  <app-course-component-using-output-decorator (onRegister)="registerEvent($event)" ></app-course-component-using-output-decorator>
+  <br>
+  <br>
+  <br>
+  <p *ngIf="message1">{{message1}}</p>
 </div>

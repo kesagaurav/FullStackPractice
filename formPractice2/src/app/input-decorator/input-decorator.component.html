@@ -1,0 +1,27 @@
+<!-- <p>input-decorator works!</p>
+<p>{{student.id}}</p>
+<p>{{student.name}}</p>
+<p>{{student.section}}</p>
+<p>{{student.gender}}</p> -->
+
+
+<!-- <p>input decorator demo</p>
+<p>{{element.id}}</p>
+<p>{{element.name}}</p>
+<p>{{element.description}}</p>
+<br> -->
+
+<div class="container">
+  <table class="table table-primary table-bordered">
+    <thead>
+      <th>id</th>
+      <th>courseName</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of courses">
+        <td>{{course.courseId}}</td>
+        <td>{{course.courseName}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

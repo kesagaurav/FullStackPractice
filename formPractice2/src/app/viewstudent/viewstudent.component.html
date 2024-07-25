@@ -15,7 +15,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr  *ngFor="let student of students" [ngClass]="{'highlight': student.sid===1}" [ngStyle]="{'font-size': '20px'}"> <!--[ngClass]="{'highlight': student.sid===2}" [ngStyle]="{'font-size': '20px'}"-->
+      <!--[ngClass]="{'highlight': student.sid===2}" [ngStyle]="{'font-size': '20px'}"-->
+      <!-- <tr  *ngFor="let student of students" [ngClass]="{'highlight': student.sid===1}" [ngStyle]="{'font-size': '20px'}"> -->
+        <!-- [ngClass]="{'highlight': student.sid===1}" [ngStyle]="{'fontSize': '20px'}" -->
+      <tr  *ngFor="let student of students" [ngClass]="{'highlight': student.sid===1}" [ngStyle]="{'fontSize': '20px'}">
         <td>{{student.sid}}</td>
         <td>{{student.studentName}}</td>
         <td>{{student.gender}}</td>

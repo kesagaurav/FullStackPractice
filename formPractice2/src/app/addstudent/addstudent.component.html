@@ -28,7 +28,7 @@
 
     <div class="form-group">
       <label for="schoolName">schoolName</label>
-      <input id="schoolName" class="form-control" type="string" formControlName="schoolName">
+      <input id="schoolName" class="form-control" type="text" formControlName="schoolName">
       <span class="alert alert-danger" *ngIf="registerForm.controls['schoolName'].errors?.['required']"> age is required</span>
       <span class="alert alert-danger"*ngIf="registerForm.controls['schoolName'].errors">age is invalid</span>
     </div>
@@ -48,7 +48,7 @@
 
     <div class="form-group">
       <label for="location">location</label>
-      <input id="location" class="form-control" type="string" formControlName="location">
+      <input id="location" class="form-control" type="text" formControlName="location">
       <span class="alert alert-danger" *ngIf="registerForm.controls['location'].errors?.['required']"> age is required</span>
       <span class="alert alert-danger"*ngIf="registerForm.controls['location'].errors">age is invalid</span>
     </div>

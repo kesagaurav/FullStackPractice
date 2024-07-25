@@ -1,0 +1,35 @@
+<div class="container">
+  <p>here are the details of an login</p>
+</div>
+
+<div class="container">
+  <table class="table table-bordered table-center">
+    <thead>
+        <tr>
+          <th>id</th>
+          <th>usernname</th>
+          <th>password</th>
+          <th>email</th>
+          <th>update</th>
+          <th>delete</th>
+        </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let login of logins">
+        <td>{{login.lid}}</td>
+        <td>{{login.username}}</td>
+        <td>{{login.password}}</td>
+        <td>{{login.email}}</td>
+        <td><button class="btn btn-warning" (click)="updateLogin(login.lid)">update</button></td>
+        <td><button class="btn btn-danger" (click)="delete(login.lid)">delete</button></td>
+      </tr>
+    </tbody>
+
+
+  </table>
+</div>
+
+<div *ngIf="successMsg!=null">
+ <span class="text-success">{{successMsg}}</span>
+</div>
