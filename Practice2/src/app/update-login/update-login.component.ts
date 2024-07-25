@@ -39,11 +39,11 @@ export class UpdateLoginComponent implements OnInit {
   updateLogin(a:Login) {
     this.service.updateLogin(this.loginForm.value,this.id).subscribe({
       next: (data) => {
-       this.loginForm.patchValue({
-        username:data.username,
-        password:data.password,
-        email:data.email
-       })
+      //  this.loginForm.patchValue({
+      //   username:data.username,
+      //   password:data.password,
+      //   email:data.email
+      //  })
         this.router.navigate(['viewlogin']);
         this.successMessage =
           `msg is added successfully ` + this.loginForm.value;
