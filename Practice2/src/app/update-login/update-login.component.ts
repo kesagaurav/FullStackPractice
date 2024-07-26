@@ -31,15 +31,15 @@ export class UpdateLoginComponent implements OnInit {
 
     this.id=this.route.snapshot.params['id'];
     this.service.getById(this.id).subscribe(res=>{
-      //this.loginForm=res;
-      this.loginForm.patchValue(res);
-    })
+      //this.loginForm.patchValue(res);
+      this.loginForm.patchValue(res);//  update form with fetched data
+    });
   }
 
   updateLogin(a:Login) {
     this.service.updateLogin(this.loginForm.value,this.id).subscribe({
       next: (data) => {
-      //  this.loginForm.patchValue({
+      //  this.loginForm.setValue({
       //   username:data.username,
       //   password:data.password,
       //   email:data.email

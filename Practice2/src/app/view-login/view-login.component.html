@@ -18,7 +18,7 @@
     <tbody>
       <tr *ngFor="let login of logins">
         <td>{{login.lid}}</td>
-        <td>{{login.username}}</td>
+        <td>{{login.username | uppercase}}</td>
         <td>{{login.password}}</td>
         <td>{{login.email}}</td>
         <td><button class="btn btn-warning" (click)="updateLogin(login.lid)">update</button></td>
