@@ -1,0 +1,54 @@
+<div class="jumbotron">
+  <h1 class="display-4 p-4 m-5">Hello,Welcome to the world of Angular</h1>
+</div>
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <ul class="nav navbar-nav">
+      <li class="nav-item text-primary"><a routerLink="/addBook">Add Book</a></li><br>
+    </ul>
+    <ul>
+      <li class="text-success"><a routerLink="/updateBook">update Book</a></li>
+    </ul>
+    <ul>
+      <li class="text-warning"><a routerLink="/viewBook">view Book</a></li>
+    </ul>
+
+    <ul>
+      <li class="text-warning"><a routerLink="/user">login</a></li>
+    </ul>
+
+    <ul>
+      <li class="text-warning"><a routerLink="/child">child</a></li>
+    </ul>
+
+
+  </nav>
+</div>
+
+<br>
+
+<div class="container">
+  <p appDirDemo>hello</p>
+</div>
+
+
+<h1>pipes demo</h1>
+  date:{{date | date:'MM/y/d'}}<br>
+  date:{{date | date:'MMM/y/d'}}<br>
+  date:{{date | date:'MMMM/y/d EEEE'}}<br>
+  date:{{date | date:'MMMM ,d y h:mm:a EEE'}}<br>
+  date:{{date | date:'MMM y d h:mm:a zzzz EEE'}}
+
+
+
+
+
+
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+
+

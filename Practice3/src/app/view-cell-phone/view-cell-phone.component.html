@@ -1,0 +1,31 @@
+<div class="container">
+  <h1 class="text-center text-success">Here are the details !!!</h1>
+</div>
+
+<div class="container">
+  <table class="table table-bordered table-primary">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>PhoneName</th>
+        <th>Model</th>
+        <th>Price</th>
+        <th>Date</th>
+        <th>PhoneType</th>
+        <th>Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cellphone of cellphones">
+        <td>{{cellphone.cid}}</td>
+        <td>{{cellphone.cellPhoneName | titlecase}}</td>
+        <td>{{cellphone.model}}</td>
+        <td>{{cellphone.price | currency}}</td>
+        <td>{{cellphone.date | date:'MMMM d,y'}}</td>
+        <td>{{cellphone.cellPhoneTypes | titlecase}}</td>
+        <td><button type="submit" class="btn btn-warning" (click)="updateForm(cellphone.cid)">update</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

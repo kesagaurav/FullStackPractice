@@ -1,0 +1,39 @@
+<div class="container">
+  <header class="text-center text-primary">Product Details</header>
+</div>
+
+<div class="container">
+  <main>
+    <form [formGroup]="productForm" (ngSubmit)="addProduct()">
+    <div class="form-group">
+      <label for="prodName">Product Name</label>
+      <input id="prodName" class="form-control" type="text" formControlName="prodName" placeholder="enter valid prod name">
+      <span class="text-danger" *ngIf="productForm.controls['prodName'].errors">product name is invalid</span>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input id="price" class="form-control" type="number" formControlName="price" placeholder="enter price ">
+      <span class="text-danger" *ngIf="productForm.controls['price'].errors">price is invalid</span>
+
+    </div>
+    <div class="form-group">
+      <label for="publishDate">Date</label>
+      <input id="publishDate" class="form-control" type="date" formControlName="publishDate">
+      <span class="text-danger" *ngIf="productForm.controls['publishDate'].errors">enter valid date field</span>
+
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary" [disabled]="productForm.invalid || productForm.pristine">Add Product</button>
+    </div>
+
+    <div *ngIf="succMsg!=null">
+      <span class="text-success">{{succMsg}}</span>
+    </div>
+
+    <div *ngIf="err!=null">
+      <span class="text-success">{{err}}</span>
+    </div>
+  </form>
+  </main>
+</div>

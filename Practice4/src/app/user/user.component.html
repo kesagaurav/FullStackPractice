@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>login form</h1>
+  <form [formGroup]="userForm" (ngSubmit)="login()">
+    <div class="form-group">
+      <label for="name">name</label>
+      <input id="name" class="form-control" type="text" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label for="name">pass</label>
+      <input id="password" class="form-control" type="text" formControlName="password">
+    </div>
+    <div class="form-group">
+      <button type="button" class="btn btn-primary">submit</button>
+    </div>
+  </form>
+</div>
+
+<!-- <div>
+  <h1>I'm a container component</h1>
+<input type="text" [(ngModel)]="data" />
+<app-user [title]="data"></app-user>
+</div> -->

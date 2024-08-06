@@ -1,0 +1,28 @@
+<h1>
+  pipes demo
+</h1>
+
+<div class="container">
+  <h2>Sorting Products list using custom pipe</h2>
+Sort the list based on
+<select [(ngModel)]="filter">
+  <option value="id">id</option>
+  <option value="category">category</option>
+</select>
+<br /><br />
+<table border="1">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of productList | pipe:filter">
+      <td>{{item.id}}</td>
+      <td>{{item.category}}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
