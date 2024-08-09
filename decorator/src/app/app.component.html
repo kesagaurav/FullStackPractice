@@ -24,7 +24,10 @@
   <app-book [id]="id"></app-book>
 </div>
 <div class="container">
-  <app-view-book></app-view-book>
+  <app-book>
+    <app-view-book></app-view-book>
+  </app-book>
+
 </div>
 <!-- <div class="container">
   <app-view-book *ngFor="let book of books"
@@ -46,9 +49,9 @@
 </div> -->
 
 
-<div class="container">
+<!-- <div class="container">
   <app-server (serverCreated)="onserverAdded($event)"></app-server>
-</div>
+</div> -->
 
 
 

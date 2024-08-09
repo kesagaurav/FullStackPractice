@@ -1,6 +1,18 @@
 <header>hello</header>
-<app-book *ngFor="let book of books"
-[book]="book">
+<div class="row">
+  <div class="col-md-12">
+    <app-book *ngFor="let book of books" [book]="book">
+      <div class="card text-white bg-primary">
+        <img class="card-img-top">
+        <div class="card-body">
+          <h4 class="card-title">{{book.bid}}</h4>
+          <p class="card-text">{{book.name}}</p>
+          <p class="card-text">{{book.content}}</p>
+        </div>
+      </div>
+    </app-book>
+
+  </div>
+</div>
 
 
-</app-book>

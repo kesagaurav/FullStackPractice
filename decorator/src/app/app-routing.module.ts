@@ -5,7 +5,8 @@ import { ViewBookComponent } from './view-book/view-book.component';
 
 const routes: Routes = [
   {path:'book',component:BookComponent},
-  {path:'view',component:ViewBookComponent}
+  {path:'view',component:ViewBookComponent},
+  {path:'',redirectTo:'/view',pathMatch:'full'}
 ];
 
 @NgModule({

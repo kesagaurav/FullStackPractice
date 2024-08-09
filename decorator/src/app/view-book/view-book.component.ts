@@ -15,7 +15,7 @@ export class ViewBookComponent implements OnInit {
 ngOnInit(): void {
 this.service.viewBooks().subscribe(res=>{
   this.books=res;
-  console.log(" values are " + res);
+  console.log(" values are " + JSON.stringify(res));
 
 });
 
