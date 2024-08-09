@@ -1,0 +1,20 @@
+<div class="container">
+  <header>hello,welcome to input decorator practice</header>
+</div>
+id is : {{id}}
+ <div class="container">
+  <div class="form-group">
+    <label for="bid">bid</label>
+    <input id="bid" class="form-control" type="number" [(ngModel)]="book1.bid" >
+  </div>
+
+   <div class="form-group">
+    <label for="name">name</label>
+    <input id="name" class="form-control" type="text" [(ngModel)]="book1.name" >
+  </div>
+  <div class="form-group">
+    <label for="content">content</label>
+    <input id="content" class="form-control" type="text" [(ngModel)]="book1.content" >
+  </div>
+  <button class="btn btn-primary" (click)="addBook(book1)">submit</button>
+</div>

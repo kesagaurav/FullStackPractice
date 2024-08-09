@@ -1,0 +1,26 @@
+<!-- <div class="container">
+  type: {{element.type}}<br>
+  name: {{element.name}}<br>
+  content: {{element.content}}
+</div> -->
+
+
+ <div class="container">
+  <div class="form-group">
+    <label for="name">nmae</label>
+    <input id="name" class="form-control" type="text" [(ngModel)]="name">
+  </div>
+  <div class="form-group">
+    <label for="content">content</label>
+    <input id="content" class="form-control" type="text" [(ngModel)]="content">
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary"  (click)="onAddServer()">submit</button>
+  </div>
+</div>
+
+
+<div class="container" *ngIf="!submitted">
+  {{name}}
+  {{content}}
+</div>

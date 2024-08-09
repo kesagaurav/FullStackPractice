@@ -1,0 +1,54 @@
+<div class="jumbotron">
+  <h1 class="display-4 text-center text-primary">Demo of Input,output and view decorator</h1>
+  <p class="lead text-center text-warning">Input,output and view decorator practice using angular</p>
+
+</div>
+
+<div class="container">
+  <nav class="navbar navbar-inverse">
+    <div class="row">
+      <div class="col-md-12">
+        <ul>
+          <li><a routerLink="/book">book</a></li>
+          <li><a routerLink="/view">view</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
+
+</div>
+ <div class="container">
+  <app-book [id]="id"></app-book>
+</div>
+<div class="container">
+  <app-view-book></app-view-book>
+</div>
+<!-- <div class="container">
+  <app-view-book *ngFor="let book of books"
+  [book1]="book"></app-view-book>
+</div> -->
+<!--this is using @input decorator where the property we are using is [book] this is coming from the book component ts file.-->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-book *ngFor="let book of bookElements" [gaurav]="book"></app-book>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- <div class="container">
+  <app-server
+  [element]="serverElements"></app-server>
+</div> -->
+
+
+<div class="container">
+  <app-server (serverCreated)="onserverAdded($event)"></app-server>
+</div>
+
+
+
