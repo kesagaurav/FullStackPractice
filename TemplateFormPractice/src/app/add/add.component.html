@@ -1,0 +1,35 @@
+<div class="container">
+  <header class="text-center text-info">Hello,template driven form</header>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-9 col-sm-9 col-xs-9">
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="form-group">
+          <label for="phoneName">Phonename:</label>
+          <!--without using any binfings we can use one way and two way databinding as well-->
+          <input id="phoneName" class="form-control" type="text" ngModel name="phoneName" required #phoneName="ngModel">
+          <span class="text-danger" *ngIf="phoneName.invalid && phoneName.touched">feild is required</span>
+        </div>
+        <div class="form-group">
+          <label for="price">price:</label>
+          <input id="price" class="form-control" type="number" ngModel name="price" required [(ngModel)]="phone.price">
+        </div>
+        <div class="form-group">
+          <label for="date">date:</label>
+          <input id="date" class="form-control" type="date" ngModel name="date" required>
+        </div>
+        <main *ngFor="let gender of genders">
+          <label for="">
+            <input type="radio" name="gender" class="form-control" ngModel [value]="gender">
+            {{gender}}
+          </label>
+        </main>
+        <button type="submit" class="btn btn-primary" [disabled]="f.pristine || f.invalid">submit</button>
+      </form>
+
+
+    </div>
+  </div>
+</div>

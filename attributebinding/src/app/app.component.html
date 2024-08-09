@@ -1,0 +1,23 @@
+<div class="container">
+  <h3 class="text-primary text-center">Hello,welcome to angular attribute binding</h3>
+</div>
+
+
+<main>
+  <div>
+   <strong><article class="text-capitalize text-center text-success font-italic">atrribute binding demo</article></strong>
+    <button class="btn btn-primary text-center" [attr.aria-label]="actionName">{{actionName}} with aria label</button>
+  </div>
+  <table border="1">
+    <tr>
+      <td [attr.colspan]="2+3">hello</td>
+    </tr>
+    <tr>
+       <td>second</td>
+    </tr>
+    <tr>
+      <td>third</td>
+   </tr>
+  </table>
+
+</main>

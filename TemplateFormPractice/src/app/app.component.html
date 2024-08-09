@@ -1,0 +1,36 @@
+<div class="jumbotron">
+  <h1 class="display-4 text-center text-primary mb-0 p-2 m-0">Template driven forms</h1>
+  <article class="lead text-center text-info">Template driven forms using angular practice</article>
+
+</div>
+
+<div class="container">
+  <nav class="navbar  navbar-expand-lg bg-info">
+    <div class="row">
+      <div class="col-sm-6">
+        <ul>
+          <li><a class="text-warning" routerLink="add">add</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-6">
+        <ul>
+          <li><a class="text-danger" routerLink="view">view</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</div>
+
+<hr><br/>
+<h1>style bindding demo</h1>
+<div>
+  <button [style.background-color]="applyStyle ? 'orange':'yellow'"
+  [style.color]="applyStyle ? 'green':'pink'">click me !</button>
+</div>
+<button [style]="applyStyle ? isStyle1:isStyle2">clieck me !</button>
+
+<div class="container">
+  <router-outlet></router-outlet>
+
+</div>
