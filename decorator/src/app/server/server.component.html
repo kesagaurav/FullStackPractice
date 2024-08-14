@@ -8,14 +8,19 @@
  <div class="container">
   <div class="form-group">
     <label for="name">nmae</label>
-    <input id="name" class="form-control" type="text" [(ngModel)]="name">
+    <!-- <input id="name" class="form-control" type="text" [(ngModel)]="name"> -->
+    <!--template to local refernces directly in template we can add-->
+    <input id="name" class="form-control" type="text" #serverName>
+
   </div>
   <div class="form-group">
     <label for="content">content</label>
-    <input id="content" class="form-control" type="text" [(ngModel)]="content">
+    <!-- <input id="content" class="form-control" type="text" [(ngModel)]="content"> -->
+    <input id="content" class="form-control" type="text" #serverContent>
+
   </div>
   <div class="form-group">
-    <button class="btn btn-primary"  (click)="onAddServer()">submit</button>
+    <button class="btn btn-primary"  (click)="onAddServer(serverName)">submit</button>
   </div>
 </div>
 

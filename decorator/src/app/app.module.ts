@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
 import { ServerComponent } from './server/server.component';
 import { ViewBookComponent } from './view-book/view-book.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookComponent,
     ServerComponent,
-    ViewBookComponent
+    ViewBookComponent,
+    RxjsComponent
   ],
   imports: [
     BrowserModule,

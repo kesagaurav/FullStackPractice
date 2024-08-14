@@ -1,9 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-server',
   templateUrl: './server.component.html',
   styleUrls: ['./server.component.css'],
+  //encapsulation:ViewEncapsulation.None
 })
 export class ServerComponent {
   @Input() element!: { type: string; name: string; content: string };
@@ -15,10 +16,17 @@ export class ServerComponent {
   name = '';
   content = '';
   submitted=true;
-  onAddServer() {
+  @ViewChild('gaurav',{static:true}) serverContent!:ElementRef;
+  onAddServer(inputName:HTMLInputElement) {
+    console.log(inputName.value);
+    console.log(this.serverContent);
     this.serverCreated.emit({
-      name: this.name,
-      content: this.content,
-    });
+        name: inputName.value,
+        content: this.serverContent.nativeElement.value
+      })
+    // this.serverCreated.emit({
+    //   name: inputName.value,
+    //   content: this.content,
+    // });
   }
 }
